@@ -39,6 +39,7 @@ func main() {
 	inputs := [][]int{
 		{-4, -1, 0, 3, 10},
 		{-7, -3, 2, 3, 11},
+		{3, 1, 2},
 	}
 	for _, input := range inputs {
 		fmt.Println("Result for input", input, "is", sortedSquares(input))
