@@ -15,19 +15,17 @@ type TreeNode struct {
 func createStr(tree *TreeNode) string {
 	var result string
 
-	fmt.Printf("Current tree val: %d\n", tree.Val)
-
 	result += "("
 	result += fmt.Sprint(tree.Val)
 
-	if tree.Right != nil {
-		result += createStr(tree.Right)
-	}
 	if tree.Left != nil {
-		if tree.Right == nil {
+		result += createStr(tree.Left)
+	}
+	if tree.Right != nil {
+		if tree.Left == nil {
 			result += "()"
 		}
-		result += createStr(tree.Left)
+		result += createStr(tree.Right)
 	}
 
 	result += ")"
@@ -47,18 +45,18 @@ func tree2str(root *TreeNode) string {
 func main() {
 	input1 := TreeNode{
 		Val: 1,
-		Left: &TreeNode{
-			Val:   3,
-			Left:  nil,
-			Right: nil,
-		},
 		Right: &TreeNode{
-			Val:  2,
-			Left: nil,
-			Right: &TreeNode{
+			Val:   3,
+			Right: nil,
+			Left:  nil,
+		},
+		Left: &TreeNode{
+			Val:   2,
+			Right: nil,
+			Left: &TreeNode{
 				Val:   4,
-				Left:  nil,
 				Right: nil,
+				Left:  nil,
 			},
 		},
 	}
@@ -67,19 +65,19 @@ func main() {
 
 	input2 := TreeNode{
 		Val: 1,
-		Left: &TreeNode{
-			Val:   3,
-			Left:  nil,
-			Right: nil,
-		},
 		Right: &TreeNode{
-			Val: 2,
-			Left: &TreeNode{
-				Val:   4,
-				Left:  nil,
-				Right: nil,
-			},
+			Val:   3,
 			Right: nil,
+			Left:  nil,
+		},
+		Left: &TreeNode{
+			Val: 2,
+			Right: &TreeNode{
+				Val:   4,
+				Right: nil,
+				Left:  nil,
+			},
+			Left: nil,
 		},
 	}
 
