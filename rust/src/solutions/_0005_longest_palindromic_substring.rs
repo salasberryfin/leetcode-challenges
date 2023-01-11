@@ -3,15 +3,15 @@
  *
  * A 'relatively' efficient solution is to check for palindromes using center characters
  *  - Each palindrome is mirrored from its center element
- *  - Iterate over each character and treat it as a center 
+ *  - Iterate over each character and treat it as a center
  *      - For this center, expand the radius to contiguous
  *      - Keep expanding while the characters match on each side of the center
  *      - When we get to the first different item: we have the size of the palindrome and the left
  *      and right positions
  *  - Get the substring from those positions and return
 */
-use std::iter::FromIterator;
 use std::convert::TryFrom;
+use std::iter::FromIterator;
 
 struct Solution;
 
@@ -20,7 +20,10 @@ impl Solution {
         let mut left: i32 = i32::try_from(l).unwrap();
         let mut right: i32 = i32::try_from(r).unwrap();
         let len_vec_s: i32 = i32::try_from(vec_s.len()).unwrap();
-        while left >= 0 && right < len_vec_s && vec_s[usize::try_from(left).unwrap()] == vec_s[usize::try_from(right).unwrap()] {
+        while left >= 0
+            && right < len_vec_s
+            && vec_s[usize::try_from(left).unwrap()] == vec_s[usize::try_from(right).unwrap()]
+        {
             left = left - 1;
             right = right + 1;
         }
@@ -44,11 +47,11 @@ impl Solution {
         let mut right = 0;
         for i in 0..len_s {
             let len_pal1 = Solution::expand(vec_s.clone(), i, i);
-            let len_pal2 = Solution::expand(vec_s.clone(), i, i+1);
+            let len_pal2 = Solution::expand(vec_s.clone(), i, i + 1);
             let len_pal = std::cmp::max(len_pal1, len_pal2);
             if len_pal > right - left {
-                left = i - (len_pal-1)/2;
-                right = i + len_pal/2;
+                left = i - (len_pal - 1) / 2;
+                right = i + len_pal / 2;
             }
         }
 

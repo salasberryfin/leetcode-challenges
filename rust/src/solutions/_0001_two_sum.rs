@@ -24,7 +24,7 @@ fn test1() {
     let nums: Vec<i32> = vec![2, 7, 11, 15];
     let target: i32 = 9;
     let expected: Vec<i32> = vec![0, 1];
-    let result = Solution::two_sum(nums,target);
+    let result = Solution::two_sum(nums, target);
     assert_eq!(result, expected);
 }
 
@@ -33,6 +33,6 @@ fn test2() {
     let nums: Vec<i32> = vec![3, 2, 4];
     let target: i32 = 6;
     let expected: Vec<i32> = vec![1, 2];
-    let result = Solution::two_sum(nums,target);
+    let result = Solution::two_sum(nums, target);
     assert_eq!(result, expected);
 }
