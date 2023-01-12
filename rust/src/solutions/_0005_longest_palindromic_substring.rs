@@ -16,7 +16,7 @@ use std::iter::FromIterator;
 struct Solution;
 
 impl Solution {
-    pub fn expand(vec_s: Vec<char>, mut l: usize, mut r: usize) -> usize {
+    pub fn expand(vec_s: Vec<char>, l: usize, r: usize) -> usize {
         let mut left: i32 = i32::try_from(l).unwrap();
         let mut right: i32 = i32::try_from(r).unwrap();
         let len_vec_s: i32 = i32::try_from(vec_s.len()).unwrap();

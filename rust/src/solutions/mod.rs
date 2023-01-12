@@ -1,2 +1,4 @@
 mod _0001_two_sum;
 mod _0005_longest_palindromic_substring;
+mod _0746_min_cost_climbing_stairs;
+mod _0062_unique_paths;
