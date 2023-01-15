@@ -1,6 +1,7 @@
 mod _0001_two_sum;
 mod _0005_longest_palindromic_substring;
 mod _0062_unique_paths;
+mod _0299_bulls_and_cows;
 mod _0438_find_all_anagrams_in_a_string;
 mod _0746_min_cost_climbing_stairs;
 mod _2421_number_of_good_paths;
