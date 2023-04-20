@@ -1,3 +1,15 @@
+/*
+Since we want to find the width, BFS looks like the most suitable algorithm
+to traverse the binary tree
+
+# In this case we have to implement the logic within BFS to find the maximum width
+
+  - Keep track of the ascending value of each node
+  - Use this value to obtain the actual width of the current level:
+    right - left + 1
+  - Add left and right nodes to the queue and analyze them in pairs for each iteration
+  - Continue until the queue is empty
+*/
 package main
 
 type TreeNode struct {
