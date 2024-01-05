@@ -5,6 +5,7 @@ mod _0062_unique_paths;
 mod _0125_valid_palindrome;
 mod _0202_happy_number;
 mod _0299_bulls_and_cows;
+mod _0300_longest_increasing_subsequence;
 mod _0746_min_cost_climbing_stairs;
 mod _0881_boats_to_save_people;
 mod _0918_maximum_sum_circular_subarray;
