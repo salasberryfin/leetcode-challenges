@@ -11,4 +11,5 @@ mod _0881_boats_to_save_people;
 mod _0918_maximum_sum_circular_subarray;
 mod _0926_flip_string_to_monotone_increasing;
 mod _0974_subarray_sums_divisible_by_k;
+mod _2124_check_if_all_as_appear_before_bs;
 mod _2421_number_of_good_paths;
